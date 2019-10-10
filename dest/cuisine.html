@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <!-- vendor style-->
+        <link rel="stylesheet" href="./vendor/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="./vendor/swiper/swiper.min.css" />
+        <link rel="stylesheet" href="./vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- custom style-->
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="page">
+            <!-- header-->
+            <header class="header">
+                <div class="container">
+                    <div class="header__inner"><a class="header__logo" href="./index.html"><img src="./images/logo.png" alt="" /></a><img class="header__slogan" src="./images/slogan.png" alt="" />
+                        <button class="header__btn btn btn-default js-navbar-open"><i class="fa fa-bars"></i></button>
+                        <section class="navbar js-navbar">
+                            <div class="navbar__backdrop js-navbar-close"></div>
+                            <div class="navbar__wrapper">
+                                <div class="navbar__header">
+                                    <div class="navbar__title">Navigation</div>
+                                    <button class="navbar__close js-navbar-close"></button>
+                                </div>
+                                <div class="navbar__body">
+                                    <form class="search js-search" action="#!">
+                                        <div class="search__content">
+                                            <div class="input-group">
+                                                <input class="form-control" type="text" placeholder="Tìm kiếm" />
+                                                <div class="input-group-append">
+                                                    <button class="input-group-text"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="search__toggle js-search-toggle" type="button"><i class="fa fa-search"></i></button>
+                                    </form>
+                                    <ul class="menu menu-root">
+                                        <li class="menu-item"><a class="menu-link active" href="./index.html">KK sapa hotel</a>
+                                        </li>
+                                        <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Hạng phòng</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                            <ul class="menu menu-sub">
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Dropdown</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                                    <ul class="menu menu-sub menu-sub-2">
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Ẩm thực</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                            <ul class="menu menu-sub">
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Dropdown</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                                    <ul class="menu menu-sub menu-sub-2">
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Sự kiện</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Tiện ích</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Ưu đãi</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Tour</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Spa</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="menu h-lang">
+                                        <li class="menu-item menu-item-group"><a class="menu-link" href="#!">VI</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                            <ul class="menu menu-sub">
+                                                <li class="menu-item"><a class="menu-link" href="#!">VI</a></li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">EN</a></li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">JP</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </header>
+            <div class="page__content">
+                <!-- main content-->
+                <div class="banner-slider">
+                    <div class="banner-slider__pagination"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-news.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-news.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-news.jpg" alt="" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="link-unstyled" href="#!">Trang chủ</a></li>
+                            <li class="breadcrumb-item active">Ẩm thực</li>
+                        </ol>
+                    </div>
+                </nav>
+                <section class="section-2 pb-20 pb-sm-60">
+                    <div class="container">
+                        <h2 class="section-2__title">Ẩm thực tại KK Sapa Hotel</h2>
+                        <div class="section-2__desc">Ẩm thực tại KK Sapa Hotel là sự kết hợp hài hòa giữa hương vị phương Đông và phương Tây. Với những đầu bếp tài ba có tay nghề khéo léo, KK Sapa Hotel hứa hẹn sẽ đem đến cho quý khách trải nghiệm ẩm thực tinh tế, sang trọng – như một lời tri ân dành tặng những vị khách của chúng tôi.</div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-30 mb-sm-0">
+                                <div class="news media"><a class="news__frame" href="./images/food-1.jpg" data-fancybox="data-fancybox"><img src="./images/food-1.jpg" alt="" /></a>
+                                    <div class="media-body">
+                                        <h3 class="news__title"><a href="#!">Nhà hàng Sín Chải</a></h3>
+                                        <div class="news__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-30 mb-sm-0">
+                                <div class="news media news--reverse"><a class="news__frame" href="./images/food-2.jpg" data-fancybox="data-fancybox"><img src="./images/food-2.jpg" alt="" /></a>
+                                    <div class="media-body">
+                                        <h3 class="news__title"><a href="#!">Nhà hàng Tả Phìn</a></h3>
+                                        <div class="news__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="menu-section"><img class="menu-section__bg" src="./images/menu-section-bg.jpg" alt="">
+                    <div class="container-fluid">
+                        <h2 class="menu-section__title">Thực đơn bữa ăn</h2>
+                        <div class="menu-section__desc">Thấu hiểu được ẩm thực là tinh hoa văn hóa của mỗi dân tộc, chúng tôi luôn cố gắng chăm chút, sửa đổi nhằm mang đến những món ăn tinh túy và giây phút thư giãn nhất cho thực khách</div>
+                    </div>
+                </section>
+                <section class="cuisine-contain">
+                    <div class="container-fluid">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-30 mb-sm-0">
+                                <div class="news media"><a class="news__frame" href="./images/food-3.jpg" data-fancybox="data-fancybox"><img src="./images/food-3.jpg" alt="" /></a>
+                                    <div class="media-body">
+                                        <h3 class="news__title"><a href="#!">Nhà hàng Sín Chải</a></h3>
+                                        <div class="news__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-30 mb-sm-0">
+                                <div class="news media news--reverse"><a class="news__frame" href="./images/food-4.jpg" data-fancybox="data-fancybox"><img src="./images/food-4.jpg" alt="" /></a>
+                                    <div class="media-body">
+                                        <h3 class="news__title"><a href="#!">Nhà hàng Tả Phìn</a></h3>
+                                        <div class="news__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="mb-30 mb-lg-80">
+                <div class="banner-slider">
+                    <div class="banner-slider__pagination"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-slide-2.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-slide-2.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-slide-2.jpg" alt="" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="utilities mb-30 mb-lg-80">
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-1.jpg" alt="" />
+                    <div class="utilities__title">Dịch vụ xe đưa đón</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-2.jpg" alt="" />
+                    <div class="utilities__title">Tour</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-3.jpg" alt="" />
+                    <div class="utilities__title">Bể bơi</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-4.jpg" alt="" />
+                    <div class="utilities__title">Sự kiện</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-5.jpg" alt="" />
+                    <div class="utilities__title">Blog</div><a class="utilities__link" href="#!"></a>
+                </div>
+            </section>
+            <!-- footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 mb-30"><a class="footer__logo" href="./index.html"><img src="./images/logo-white.png" alt="" /></a>
+                            <div class="f-contact">
+                                <div class="f-contact__title">CÔNG TY CỔ PHẦN VIỆT PHÁP SA PA</div>
+                                <div class="f-contact__desc">
+                                    <p>Địa chỉ: Đường Mường Hoa, Thị trấn Sapa, Huyện Sapa, Tỉnh Lào Cai<br />Số điện thoại: 0214 378888 | Fax: (+84) 214 6253 888<br />Email: reservation@kksapahotel.com – sales@kksapahotel.com<br />Website: http://kksapahotel.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mb-30">
+                            <h2 class="footer__title">Liên kết nhanh</h2>
+                            <ul class="f-menu">
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Ưu Đãi</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Tin Tức</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Tuyển Dụng</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Hỏi Đáp</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Brochure</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Liên Hệ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <form class="f-form">
+                                <div class="f-form__label">Đăng ký nhận bản tin & ưu đãi từ KK Spa Hotel</div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Họ và tên" />
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="email" placeholder="Email" />
+                                </div>
+                                <button class="f-form__btn btn btn-primary btn-block">Đăng ký</button>
+                            </form>
+                            <ul class="f-socials">
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-facebook.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-instagram.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-twitter.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-youtube.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-skype.png" alt="" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <div class="container">Copyright by HM Creative & Media Agency © 2019</div>
+                </div>
+            </footer>
+            <!-- modals + sticky widgets-->
+            <div class="sticky">
+                <ul class="nav sticky__nav">
+                    <li class="nav-item"><a class="nav-link js-sticky-tab active" href="#sticky-tab-1" data-toggle="tab">CONTACT US</a></li>
+                    <li class="nav-item"><a class="nav-link js-sticky-tab" href="#sticky-tab-2" data-toggle="tab">RESERVATION</a></li>
+                </ul>
+                <div class="sticky__content tab-content">
+                    <div class="tab-pane active" id="sticky-tab-1">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="FULLNAME" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="EMAIL" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select">
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="INQUIRY"></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button class="sticky__btn" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="sticky-tab-2">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="FULLNAME" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="EMAIL" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select">
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="INQUIRY"></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button class="sticky__btn" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- javascript library-->
+        <!-- vendor script-->
+        <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+        <script src="./vendor/popper/popper.min.js"></script>
+        <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="./vendor/swiper/swiper.min.js"></script>
+        <script src="./vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- custom script-->
+        <script src="./js/globals.js"></script>
+    </body>
+</html>

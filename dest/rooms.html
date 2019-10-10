@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <!-- vendor style-->
+        <link rel="stylesheet" href="./vendor/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="./vendor/swiper/swiper.min.css" />
+        <link rel="stylesheet" href="./vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- custom style-->
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="page">
+            <!-- header-->
+            <header class="header">
+                <div class="container">
+                    <div class="header__inner"><a class="header__logo" href="./index.html"><img src="./images/logo.png" alt="" /></a><img class="header__slogan" src="./images/slogan.png" alt="" />
+                        <button class="header__btn btn btn-default js-navbar-open"><i class="fa fa-bars"></i></button>
+                        <section class="navbar js-navbar">
+                            <div class="navbar__backdrop js-navbar-close"></div>
+                            <div class="navbar__wrapper">
+                                <div class="navbar__header">
+                                    <div class="navbar__title">Navigation</div>
+                                    <button class="navbar__close js-navbar-close"></button>
+                                </div>
+                                <div class="navbar__body">
+                                    <form class="search js-search" action="#!">
+                                        <div class="search__content">
+                                            <div class="input-group">
+                                                <input class="form-control" type="text" placeholder="Tìm kiếm" />
+                                                <div class="input-group-append">
+                                                    <button class="input-group-text"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="search__toggle js-search-toggle" type="button"><i class="fa fa-search"></i></button>
+                                    </form>
+                                    <ul class="menu menu-root">
+                                        <li class="menu-item"><a class="menu-link active" href="./index.html">KK sapa hotel</a>
+                                        </li>
+                                        <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Hạng phòng</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                            <ul class="menu menu-sub">
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Dropdown</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                                    <ul class="menu menu-sub menu-sub-2">
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Ẩm thực</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                            <ul class="menu menu-sub">
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                </li>
+                                                <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Dropdown</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                                    <ul class="menu menu-sub menu-sub-2">
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Sự kiện</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Tiện ích</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Ưu đãi</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Tour</a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="#!">Spa</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="menu h-lang">
+                                        <li class="menu-item menu-item-group"><a class="menu-link" href="#!">VI</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                            <ul class="menu menu-sub">
+                                                <li class="menu-item"><a class="menu-link" href="#!">VI</a></li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">EN</a></li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">JP</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </header>
+            <div class="page__content">
+                <!-- main content-->
+                <div class="banner-slider">
+                    <div class="banner-slider__pagination"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-news.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-news.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-news.jpg" alt="" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="link-unstyled" href="#!">Trang chủ</a></li>
+                            <li class="breadcrumb-item active">Hạng phòng</li>
+                        </ol>
+                    </div>
+                </nav>
+                <section class="section-2 pb-20">
+                    <div class="container">
+                        <h2 class="section-2__title">Đặt phòng trực tiếp<br>trên website của chúng tôi</h2>
+                        <div class="section-2__desc">
+                            <p>KK Sapa Hotel khuyến khích khách hàng đặt phòng ngay tại website của chúng tôi để được hưởng những ưu đãi tốt nhất.</p>
+                            <p>Khách hàng đặt phòng qua website sẽ được đảm bảo mức giá ưu đãi hợp lý. Ngoài ra, du khách có thể lựa chọn phòng theo ý mình và được nhân viên tư vấn chi tiết về các hạng phòng phù hợp.</p>
+                            <p>Đặt phòng trực tiếp qua website khách sạn giúp du khách không còn phải lo lắng về việc đặt chỗ giữ phòng, cũng như không xảy ra tình trạng mất hay chuyển đổi phòng nhờ hệ thống booking chuyên nghiệp.</p>
+                            <p>Tất cả các phòng tại KK Sapa Hotel đều có view nhìn ra núi và thung lũng Mường Hoa, giúp quý khách dễ dàng thưởng thức phong cảnh Sapa tuyệt đẹp. Mong rằng bạn sẽ có kỳ nghỉ đáng nhớ với dịch vụ của chúng tôi.</p>
+                        </div>
+                        <div class="filter">
+                            <div class="filter__title">Kiểm tra phòng trống và đặt trực tiếp</div>
+                            <div class="filter__bar">
+                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-calendar.png" alt="">
+                                    <select class="filter__select custom-select">
+                                        <option>Check in - Check out</option>
+                                        <option>Check in - Check out</option>
+                                        <option>Check in - Check out</option>
+                                    </select>
+                                </div>
+                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-user-o.png" alt="">
+                                    <select class="filter__select custom-select">
+                                        <option>02 người lớn - 01 trẻ em</option>
+                                        <option>02 người lớn - 01 trẻ em</option>
+                                        <option>02 người lớn - 01 trẻ em</option>
+                                    </select>
+                                </div>
+                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-codes.png" alt="">
+                                    <select class="filter__select custom-select">
+                                        <option>Mã ưu đãi</option>
+                                        <option>Mã ưu đãi</option>
+                                        <option>Mã ưu đãi</option>
+                                    </select>
+                                </div><a class="filter__btn" href="#!">Tìm kiếm</a>
+                            </div>
+                            <div class="form-inline">
+                                <select class="filter__select custom-select my-2 mr-sm-20">
+                                    <option>Filter</option>
+                                    <option>Filter</option>
+                                    <option>Filter</option>
+                                </select>
+                                <select class="filter__select custom-select my-2 mr-sm-20">
+                                    <option>Soft by</option>
+                                    <option>Soft by</option>
+                                    <option>Soft by</option>
+                                </select>
+                                <select class="filter__select custom-select my-2 mr-sm-20">
+                                    <option>Mã ưu đãi</option>
+                                    <option>Mã ưu đãi</option>
+                                    <option>Mã ưu đãi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-40">
+                                <div class="room">
+                                    <div class="room__content media"><a class="room__frame" href="./images/room-img-1.jpg" data-fancybox="data-fancybox"><img src="./images/room-img-1.jpg" alt="" /></a>
+                                        <div class="media-body">
+                                            <h3 class="room__title"><a href="#!">Phòng Deluxe</a></h3>
+                                            <ul class="nav room__tabs">
+                                                <li class="nav-item"><a class="nav-link active" href="#room-tab-1-1" data-toggle="tab">Giới thiệu</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-1-2" data-toggle="tab">Đặc điểm</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-1-3" data-toggle="tab">Tiện ích</a></li>
+                                            </ul>
+                                            <div class="tab-content room__tab-content">
+                                                <div class="tab-pane active" id="room-tab-1-1">
+                                                    <div class="row">
+                                                        <div class="col-lg-7 mb-2">
+                                                            <p>Thích hợp cho 3 người bao gồm 2 người lớn và 1 trẻ em dưới 6 tuổi. Phòng ngủ rộng rãi có view hướng ra núi Fansipan là điểm cộng cho hạng phòng này.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 mb-2">
+                                                            <div><strong>Sức chứa:</strong> 4 Người</div>
+                                                            <div><strong>Size:</strong> 120-160m2</div>
+                                                            <div><strong>View:</strong> Sapa</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-1-2">
+                                                    <p>Đặc điểm</p>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-1-3">
+                                                    <p>Tiện ích</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room__footer">
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-40">
+                                <div class="room">
+                                    <div class="room__content media"><a class="room__frame" href="./images/room-img-2.jpg" data-fancybox="data-fancybox"><img src="./images/room-img-2.jpg" alt="" /></a>
+                                        <div class="media-body">
+                                            <h3 class="room__title"><a href="#!">Phòng Premier</a></h3>
+                                            <ul class="nav room__tabs">
+                                                <li class="nav-item"><a class="nav-link active" href="#room-tab-2-1" data-toggle="tab">Giới thiệu</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-2-2" data-toggle="tab">Đặc điểm</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-2-3" data-toggle="tab">Tiện ích</a></li>
+                                            </ul>
+                                            <div class="tab-content room__tab-content">
+                                                <div class="tab-pane active" id="room-tab-2-1">
+                                                    <div class="row">
+                                                        <div class="col-lg-7 mb-2">
+                                                            <p>Thích hợp cho 3 người bao gồm 2 người lớn và 1 trẻ em dưới 6 tuổi. Phòng ngủ rộng rãi có view hướng ra núi Fansipan là điểm cộng cho hạng phòng này.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 mb-2">
+                                                            <div><strong>Sức chứa:</strong> 4 Người</div>
+                                                            <div><strong>Size:</strong> 120-160m2</div>
+                                                            <div><strong>View:</strong> Sapa</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-2-2">
+                                                    <p>Đặc điểm</p>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-2-3">
+                                                    <p>Tiện ích</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room__footer">
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-40">
+                                <div class="room">
+                                    <div class="room__content media"><a class="room__frame" href="./images/room-img-3.jpg" data-fancybox="data-fancybox"><img src="./images/room-img-3.jpg" alt="" /></a>
+                                        <div class="media-body">
+                                            <h3 class="room__title"><a href="#!">Phòng Mountain Suite</a></h3>
+                                            <ul class="nav room__tabs">
+                                                <li class="nav-item"><a class="nav-link active" href="#room-tab-3-1" data-toggle="tab">Giới thiệu</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-3-2" data-toggle="tab">Đặc điểm</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-3-3" data-toggle="tab">Tiện ích</a></li>
+                                            </ul>
+                                            <div class="tab-content room__tab-content">
+                                                <div class="tab-pane active" id="room-tab-3-1">
+                                                    <div class="row">
+                                                        <div class="col-lg-7 mb-2">
+                                                            <p>Thích hợp cho 3 người bao gồm 2 người lớn và 1 trẻ em dưới 6 tuổi. Phòng ngủ rộng rãi có view hướng ra núi Fansipan là điểm cộng cho hạng phòng này.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 mb-2">
+                                                            <div><strong>Sức chứa:</strong> 4 Người</div>
+                                                            <div><strong>Size:</strong> 120-160m2</div>
+                                                            <div><strong>View:</strong> Sapa</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-3-2">
+                                                    <p>Đặc điểm</p>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-3-3">
+                                                    <p>Tiện ích</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room__footer">
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-40">
+                                <div class="room">
+                                    <div class="room__content media"><a class="room__frame" href="./images/room-img-4.jpg" data-fancybox="data-fancybox"><img src="./images/room-img-4.jpg" alt="" /></a>
+                                        <div class="media-body">
+                                            <h3 class="room__title"><a href="#!">Phòng Family</a></h3>
+                                            <ul class="nav room__tabs">
+                                                <li class="nav-item"><a class="nav-link active" href="#room-tab-4-1" data-toggle="tab">Giới thiệu</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-4-2" data-toggle="tab">Đặc điểm</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-4-3" data-toggle="tab">Tiện ích</a></li>
+                                            </ul>
+                                            <div class="tab-content room__tab-content">
+                                                <div class="tab-pane active" id="room-tab-4-1">
+                                                    <div class="row">
+                                                        <div class="col-lg-7 mb-2">
+                                                            <p>Thích hợp cho 3 người bao gồm 2 người lớn và 1 trẻ em dưới 6 tuổi. Phòng ngủ rộng rãi có view hướng ra núi Fansipan là điểm cộng cho hạng phòng này.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 mb-2">
+                                                            <div><strong>Sức chứa:</strong> 4 Người</div>
+                                                            <div><strong>Size:</strong> 120-160m2</div>
+                                                            <div><strong>View:</strong> Sapa</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-4-2">
+                                                    <p>Đặc điểm</p>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-4-3">
+                                                    <p>Tiện ích</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room__footer">
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-40">
+                                <div class="room">
+                                    <div class="room__content media"><a class="room__frame" href="./images/room-img-5.jpg" data-fancybox="data-fancybox"><img src="./images/room-img-5.jpg" alt="" /></a>
+                                        <div class="media-body">
+                                            <h3 class="room__title"><a href="#!">Phòng President Suite</a></h3>
+                                            <ul class="nav room__tabs">
+                                                <li class="nav-item"><a class="nav-link active" href="#room-tab-5-1" data-toggle="tab">Giới thiệu</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-5-2" data-toggle="tab">Đặc điểm</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#room-tab-5-3" data-toggle="tab">Tiện ích</a></li>
+                                            </ul>
+                                            <div class="tab-content room__tab-content">
+                                                <div class="tab-pane active" id="room-tab-5-1">
+                                                    <div class="row">
+                                                        <div class="col-lg-7 mb-2">
+                                                            <p>Thích hợp cho 3 người bao gồm 2 người lớn và 1 trẻ em dưới 6 tuổi. Phòng ngủ rộng rãi có view hướng ra núi Fansipan là điểm cộng cho hạng phòng này.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 mb-2">
+                                                            <div><strong>Sức chứa:</strong> 4 Người</div>
+                                                            <div><strong>Size:</strong> 120-160m2</div>
+                                                            <div><strong>View:</strong> Sapa</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-5-2">
+                                                    <p>Đặc điểm</p>
+                                                </div>
+                                                <div class="tab-pane" id="room-tab-5-3">
+                                                    <p>Tiện ích</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room__footer">
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="mb-30 mb-lg-80">
+                <div class="banner-slider">
+                    <div class="banner-slider__pagination"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-slide-2.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-slide-2.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner-slider__frame"><img src="./images/banner-slide-2.jpg" alt="" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="utilities mb-30 mb-lg-80">
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-1.jpg" alt="" />
+                    <div class="utilities__title">Dịch vụ xe đưa đón</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-2.jpg" alt="" />
+                    <div class="utilities__title">Tour</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-3.jpg" alt="" />
+                    <div class="utilities__title">Bể bơi</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-4.jpg" alt="" />
+                    <div class="utilities__title">Sự kiện</div><a class="utilities__link" href="#!"></a>
+                </div>
+                <div class="utilities__item"><img class="utilities__bg" src="./images/utility-5.jpg" alt="" />
+                    <div class="utilities__title">Blog</div><a class="utilities__link" href="#!"></a>
+                </div>
+            </section>
+            <!-- footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 mb-30"><a class="footer__logo" href="./index.html"><img src="./images/logo-white.png" alt="" /></a>
+                            <div class="f-contact">
+                                <div class="f-contact__title">CÔNG TY CỔ PHẦN VIỆT PHÁP SA PA</div>
+                                <div class="f-contact__desc">
+                                    <p>Địa chỉ: Đường Mường Hoa, Thị trấn Sapa, Huyện Sapa, Tỉnh Lào Cai<br />Số điện thoại: 0214 378888 | Fax: (+84) 214 6253 888<br />Email: reservation@kksapahotel.com – sales@kksapahotel.com<br />Website: http://kksapahotel.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mb-30">
+                            <h2 class="footer__title">Liên kết nhanh</h2>
+                            <ul class="f-menu">
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Ưu Đãi</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Tin Tức</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Tuyển Dụng</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Hỏi Đáp</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Brochure</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Liên Hệ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <form class="f-form">
+                                <div class="f-form__label">Đăng ký nhận bản tin & ưu đãi từ KK Spa Hotel</div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Họ và tên" />
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="email" placeholder="Email" />
+                                </div>
+                                <button class="f-form__btn btn btn-primary btn-block">Đăng ký</button>
+                            </form>
+                            <ul class="f-socials">
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-facebook.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-instagram.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-twitter.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-youtube.png" alt="" /></a></li>
+                                <li class="f-socials__item"><a class="f-socials__link" href="#!"><img src="./images/icon-skype.png" alt="" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <div class="container">Copyright by HM Creative & Media Agency © 2019</div>
+                </div>
+            </footer>
+            <!-- modals + sticky widgets-->
+            <div class="sticky">
+                <ul class="nav sticky__nav">
+                    <li class="nav-item"><a class="nav-link js-sticky-tab active" href="#sticky-tab-1" data-toggle="tab">CONTACT US</a></li>
+                    <li class="nav-item"><a class="nav-link js-sticky-tab" href="#sticky-tab-2" data-toggle="tab">RESERVATION</a></li>
+                </ul>
+                <div class="sticky__content tab-content">
+                    <div class="tab-pane active" id="sticky-tab-1">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="FULLNAME" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="EMAIL" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select">
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="INQUIRY"></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button class="sticky__btn" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="sticky-tab-2">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="FULLNAME" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="EMAIL" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select">
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                    <option>VIETNAM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="INQUIRY"></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button class="sticky__btn" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- javascript library-->
+        <!-- vendor script-->
+        <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+        <script src="./vendor/popper/popper.min.js"></script>
+        <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="./vendor/swiper/swiper.min.js"></script>
+        <script src="./vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- custom script-->
+        <script src="./js/globals.js"></script>
+    </body>
+</html>
