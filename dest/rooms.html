@@ -139,21 +139,21 @@
                         <div class="filter mb-30">
                             <div class="filter__title">Kiểm tra phòng trống và đặt trực tiếp</div>
                             <div class="filter__bar">
-                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-calendar.png" alt="">
+                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-calendar.png" alt="" />
                                     <select class="filter__select custom-select">
                                         <option>Check in - Check out</option>
                                         <option>Check in - Check out</option>
                                         <option>Check in - Check out</option>
                                     </select>
                                 </div>
-                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-user-o.png" alt="">
+                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-user-o.png" alt="" />
                                     <select class="filter__select custom-select">
                                         <option>02 người lớn - 01 trẻ em</option>
                                         <option>02 người lớn - 01 trẻ em</option>
                                         <option>02 người lớn - 01 trẻ em</option>
                                     </select>
                                 </div>
-                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-codes.png" alt="">
+                                <div class="filter__select-wrap"><img class="filter__select-icon" src="./images/icon-codes.png" alt="" />
                                     <select class="filter__select custom-select">
                                         <option>Mã ưu đãi</option>
                                         <option>Mã ưu đãi</option>
@@ -195,7 +195,7 @@
                                         </div>
                                     </div>
                                     <div class="room__footer">
-                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn js-room-booking" href="#!" data-room-id="123">Đặt phòng</a>
                                     </div>
                                 </div>
                             </li>
@@ -231,7 +231,7 @@
                                         </div>
                                     </div>
                                     <div class="room__footer">
-                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn js-room-booking" href="#!" data-room-id="123">Đặt phòng</a>
                                     </div>
                                 </div>
                             </li>
@@ -267,7 +267,7 @@
                                         </div>
                                     </div>
                                     <div class="room__footer">
-                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn js-room-booking" href="#!" data-room-id="123">Đặt phòng</a>
                                     </div>
                                 </div>
                             </li>
@@ -303,7 +303,7 @@
                                         </div>
                                     </div>
                                     <div class="room__footer">
-                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn js-room-booking" href="#!" data-room-id="123">Đặt phòng</a>
                                     </div>
                                 </div>
                             </li>
@@ -339,13 +339,77 @@
                                         </div>
                                     </div>
                                     <div class="room__footer">
-                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn" href="#!">Đặt phòng</a>
+                                        <div class="room__price">From <span class="text-primary text-700">$218.00</span> per night</div><a class="room__btn js-room-booking" href="#!" data-room-id="123">Đặt phòng</a>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </section>
+                <div class="md-booking modal fade" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form>
+                                    <div class="md-booking__title">Đăng ký đặt phòng</div>
+                                    <input class="js-room-id" type="hidden" />
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Họ tên*" />
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Điện thoại*" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Email" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Ngày Check in" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Ngày Check out" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option>Số lượng người lớn</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option>Số lượng trẻ em</option>
+                                                    <option>Số lượng trẻ em</option>
+                                                    <option>Số lượng trẻ em</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="md-booking__btn" type="submit">Gửi đăng ký</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-confirm modal fade" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="d-flex justify-content-center"><img class="md-confirm__img" src="./images/confirm-img.png" alt="" /></div>
+                                <div class="md-confirm__text">KK Sapa Hotel đã xác nhận thông tin đặt phòng của Quý khách. Tư vấn viên của chúng tôi sẽ liên hệ lại với Quý khách trong thời gian sớm nhất.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="mb-30 mb-lg-80">
                 <div class="banner-slider">

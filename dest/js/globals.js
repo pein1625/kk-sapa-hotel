@@ -27,6 +27,20 @@ $(function () {
   });
 });
 
+// endow slider
+$(function () {
+  addSwiper('.endow-slider', {
+    navigation: true,
+    speed: 800,
+    loop: true,
+    autoHeight: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false
+    }
+  });
+});
+
 // spa slider
 $(function () {
   if (!$('.spa-slider').length) {
@@ -106,6 +120,15 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function () {
+  $('.js-room-booking').on('click', function (e) {
+    e.preventDefault();
+    var id = $(this).data('roomId');
+    $('.js-room-id').val(id);
+    $('.md-booking').modal('show');
+  });
+});
 
 $(function () {
   $('.conference__frame').on('mouseenter', function () {
