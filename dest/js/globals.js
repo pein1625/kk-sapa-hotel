@@ -29,16 +29,29 @@ $(function () {
 
 // spa slider
 $(function () {
-  addSwiper('.spa-slider', {
+  if (!$('.spa-slider').length) {
+    return;
+  }
+
+  var loopedSlides = $('.spa-slider').find('.swiper-slide').length;
+
+  var spaSlider = addSwiper('.spa-slider', {
     navigation: true,
-    // effect: 'fade',
     speed: 800,
     loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
     }
-  });
+  })[0];
+
+  var imgSlider = addSwiper('.spa-img-slider', {
+    effect: 'fade',
+    loop: true
+  })[0];
+
+  imgSlider.controller.control = spaSlider;
+  spaSlider.controller.control = imgSlider;
 });
 
 // room slider
@@ -93,6 +106,15 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function () {
+  $('.conference__frame').on('mouseenter', function () {
+    var src = $(this).data('zoom');
+    $('.conference__zoom').attr('src', src).show();
+  }).on('mouseleave', function () {
+    $('.conference__zoom').attr('src', '').hide();
+  });
+});
 
 $(function () {
   $('.js-sticky-tab').on('click', function (e) {
