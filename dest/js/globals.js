@@ -122,6 +122,27 @@ function addSwiper(selector, options = {}) {
 }
 
 $(function () {
+  $('.filter__dropdown-toggle').on('click', function (e) {
+    e.stopPropagation();
+    $(this).toggleClass('active');
+    $(this).siblings('.filter__dropdown-menu').toggle();
+
+    if ($(this).hasClass('active')) {
+      $(this).siblings('.filter__dropdown-menu').find('input').focus();
+    }
+  });
+
+  $('html, body').on('click', function () {
+    $('.filter__dropdown-menu').hide();
+    $('.filter__dropdown-toggle').removeClass('active');
+  });
+
+  $('.filter__dropdown-menu').on('click', function (e) {
+    e.stopPropagation();
+  });
+});
+
+$(function () {
   $('.js-room-booking').on('click', function (e) {
     e.preventDefault();
     var id = $(this).data('roomId');
