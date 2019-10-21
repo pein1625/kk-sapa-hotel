@@ -127,9 +127,12 @@ $(function () {
     $(this).toggleClass('active');
     $(this).siblings('.filter__dropdown-menu').toggle();
 
+    $('.filter__dropdown-menu').not($(this).siblings('.filter__dropdown-menu')).hide();
+
     if ($(this).hasClass('active')) {
       $('.js-datepicker').datepicker({
-        startDate: '+1d'
+        autoclose: true,
+        startDate: '+0d'
       });
 
       numberInput('.js-quantity-value');
@@ -140,10 +143,61 @@ $(function () {
         var value = input.val();
         var newValue = parseInt(value) + plus;
 
-        if (newValue >= 0) {
+        var minVal = 0;
+
+        if (input.hasClass('js-adult')) {
+          minVal = 1;
+        }
+
+        if (newValue >= minVal) {
           input.val(newValue);
           input.trigger('change');
         }
+      });
+
+      $('.js-checkin').on('change', function () {
+        $('.js-checkout').focus();
+      });
+
+      $('.js-checkout').on('change', function () {
+        var checkin = $('.js-checkin').val();
+        var checkout = $('.js-checkout').val();
+
+        if (checkin == '') {
+          $('.js-checkin').focus();
+        } else {
+          $('.filter__dropdown-menu').hide();
+          $('.js-room-timing').html(`${checkin} - ${checkout}`);
+        }
+      });
+
+      $('.js-children, .js-adult').on('change keyup', function () {
+        var value = $(this).val();
+
+        if (value == '') {
+          $(this).val(0);
+          value = 0;
+
+          if ($(this).hasClass('js-adult')) {
+            $(this).val(1);
+            value = 1;
+          }
+        }
+
+        var children = $('.js-children').val();
+        var adult = $('.js-adult').val();
+
+        if (adult < 10) {
+          adult = '0' + adult;
+        }
+
+        if (children > 0 && children < 10) {
+          children = '0' + children;
+        }
+
+        console.log('abc');
+
+        $('.js-people').html(`${adult} người lớn, ${children} trẻ em`);
       });
     }
   });
@@ -151,6 +205,13 @@ $(function () {
   $('html, body').on('click', function () {
     $('.filter__dropdown-menu').hide();
     $('.filter__dropdown-toggle').removeClass('active');
+
+    var checkin = $('.js-checkin').val();
+    var checkout = $('.js-checkout').val();
+
+    if (!(checkin && checkout)) {
+      $('.js-room-timing').html('Checkin - Checkout');
+    }
   });
 
   $('.filter__dropdown-menu').on('click', function (e) {
@@ -161,7 +222,8 @@ $(function () {
 $(function () {
   $('.md-booking').on('shown.bs.modal', function () {
     $(this).find('.js-datepicker').datepicker({
-      startDate: '+1d'
+      autoclose: true,
+      startDate: '+0d'
     });
   });
 });
