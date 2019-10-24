@@ -270,6 +270,14 @@ $(function () {
       $('.sticky').removeClass('hide');
     }
   });
+
+  $('.sticky__content').on('click', function (e) {
+    e.stopPropagation();
+  });
+
+  $('html, body').on('click', function (e) {
+    $('.sticky').addClass('hide');
+  });
 });
 
 $(function () {
