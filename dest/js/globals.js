@@ -84,15 +84,28 @@ $(function () {
 
 // banner slider
 $(function () {
-  addSwiper('.banner-slider', {
+  var bannerSlider = addSwiper('.banner-slider', {
+    init: false,
     pagination: true,
     speed: 800,
     loop: true,
+    autoHeight: true,
+    effect: 'fade',
     autoplay: {
-      delay: 5000,
+      delay: 9000,
       disableOnInteraction: false
     }
+  })[0];
+
+  if (!bannerSlider) {
+    return;
+  }
+
+  bannerSlider.on('init', function () {
+    $('.banner-slider').addClass('animating');
   });
+
+  bannerSlider.init();
 });
 
 // swiper template
