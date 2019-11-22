@@ -135,108 +135,108 @@ function addSwiper(selector, options = {}) {
 }
 
 $(function () {
-  $('.filter__dropdown-toggle').on('click', function (e) {
+  $(".filter__dropdown-toggle").on("click", function (e) {
     e.stopPropagation();
-    $(this).toggleClass('active');
-    $(this).siblings('.filter__dropdown-menu').toggle();
+    $(this).toggleClass("active");
+    $(this).siblings(".filter__dropdown-menu").toggle();
 
-    $('.filter__dropdown-menu').not($(this).siblings('.filter__dropdown-menu')).hide();
+    $(".filter__dropdown-menu").not($(this).siblings(".filter__dropdown-menu")).hide();
 
-    if ($(this).hasClass('active')) {
-      $('.js-datepicker').datepicker({
+    if ($(this).hasClass("active")) {
+      $(".js-datepicker").datepicker({
         autoclose: true,
-        startDate: '+0d'
+        startDate: "+0d"
       });
 
-      numberInput('.js-quantity-value');
+      numberInput(".js-quantity-value");
 
-      $('.js-quantity-btn').on('click', function () {
-        var plus = $(this).data('plus');
-        var input = $(this).closest('.js-quantity').find('.js-quantity-value');
+      $(".js-quantity-btn").on("click", function () {
+        var plus = $(this).data("plus");
+        var input = $(this).closest(".js-quantity").find(".js-quantity-value");
         var value = input.val();
         var newValue = parseInt(value) + plus;
 
         var minVal = 0;
 
-        if (input.hasClass('js-adult')) {
+        if (input.hasClass("js-adult")) {
           minVal = 1;
         }
 
         if (newValue >= minVal) {
           input.val(newValue);
-          input.trigger('change');
+          input.trigger("change");
         }
       });
 
-      $('.js-checkin').on('change', function () {
-        $('.js-checkout').focus();
+      $(".js-checkin").on("change", function () {
+        $(".js-checkout").focus();
       });
 
-      $('.js-checkout').on('change', function () {
-        var checkin = $('.js-checkin').val();
-        var checkout = $('.js-checkout').val();
+      $(".js-checkout").on("change", function () {
+        var checkin = $(".js-checkin").val();
+        var checkout = $(".js-checkout").val();
 
-        if (checkin == '') {
-          $('.js-checkin').focus();
+        if (checkin == "") {
+          $(".js-checkin").focus();
         } else {
-          $('.filter__dropdown-menu').hide();
-          $('.js-room-timing').html(`${checkin} - ${checkout}`);
+          $(".filter__dropdown-menu").hide();
+          $(".js-room-timing").html(`${checkin} - ${checkout}`);
         }
       });
 
-      $('.js-children, .js-adult').on('change keyup', function () {
+      $(".js-children, .js-adult").on("change keyup", function () {
         var value = $(this).val();
 
-        if (value == '') {
+        if (value == "") {
           $(this).val(0);
           value = 0;
 
-          if ($(this).hasClass('js-adult')) {
+          if ($(this).hasClass("js-adult")) {
             $(this).val(1);
             value = 1;
           }
         }
 
-        var children = $('.js-children').val();
-        var adult = $('.js-adult').val();
+        var children = $(".js-children").val();
+        var adult = $(".js-adult").val();
 
         if (adult < 10) {
-          adult = '0' + adult;
+          adult = "0" + adult;
         }
 
         if (children > 0 && children < 10) {
-          children = '0' + children;
+          children = "0" + children;
         }
 
-        console.log('abc');
+        console.log("abc");
 
-        $('.js-people').html(`${adult} người lớn, ${children} trẻ em`);
+        $(".js-people").html(`${adult} người lớn, ${children} trẻ em`);
       });
     }
   });
 
-  $('html, body').on('click', function () {
-    $('.filter__dropdown-menu').hide();
-    $('.filter__dropdown-toggle').removeClass('active');
+  $("html, body").on("click", function () {
+    $(".filter__dropdown-menu").hide();
+    $(".filter__dropdown-toggle").removeClass("active");
 
-    var checkin = $('.js-checkin').val();
-    var checkout = $('.js-checkout').val();
+    var checkin = $(".js-checkin").val();
+    var checkout = $(".js-checkout").val();
 
     if (!(checkin && checkout)) {
-      $('.js-room-timing').html('Checkin - Checkout');
+      $(".js-room-timing").html("Checkin - Checkout");
     }
   });
 
-  $('.filter__dropdown-menu').on('click', function (e) {
+  $(".filter__dropdown-menu").on("click", function (e) {
     e.stopPropagation();
   });
 });
 
 $(function () {
-  $('.md-booking').on('shown.bs.modal', function () {
-    $(this).find('.js-datepicker').datepicker({
+  $(".md-booking").on("shown.bs.modal", function () {
+    $(this).find(".js-datepicker").datepicker({
       autoclose: true,
-      startDate: '+0d'
+      startDate: "+0d"
     });
   });
 });
@@ -254,63 +254,67 @@ function numberInput(className) {
 }
 
 $(function () {
-  $('.js-room-booking').on('click', function (e) {
+  $(".js-room-booking").on("click", function (e) {
     e.preventDefault();
-    var id = $(this).data('roomId');
-    $('.js-room-id').val(id);
-    $('.md-booking').modal('show');
+    var id = $(this).data("roomId");
+    $(".js-room-id").val(id);
+    $(".md-booking").modal("show");
   });
 });
 
 $(function () {
-  $('.conference__frame').on('mouseenter', function () {
-    var src = $(this).data('zoom');
-    $('.conference__zoom').attr('src', src).show();
-  }).on('mouseleave', function () {
-    $('.conference__zoom').attr('src', '').hide();
+  $(".conference__frame").on("mouseenter", function () {
+    var src = $(this).data("zoom");
+    $(".conference__zoom").attr("src", src).show();
+  }).on("mouseleave", function () {
+    $(".conference__zoom").attr("src", "").hide();
   });
 });
 
 $(function () {
-  $('.js-sticky-tab').on('click', function (e) {
+  if ($(window).width() < 768) {
+    $(".sticky").addClass("hide");
+  }
+
+  $(".js-sticky-tab").on("click", function (e) {
     e.stopImmediatePropagation();
     e.preventDefault();
 
-    if ($(this).hasClass('active')) {
-      $('.sticky').toggleClass('hide');
+    if ($(this).hasClass("active")) {
+      $(".sticky").toggleClass("hide");
     } else {
-      $(this).tab('show');
-      $('.sticky').removeClass('hide');
+      $(this).tab("show");
+      $(".sticky").removeClass("hide");
     }
   });
 
-  $('.sticky__content').on('click', function (e) {
+  $(".sticky__content").on("click", function (e) {
     e.stopPropagation();
   });
 
-  $('html, body').on('click', function (e) {
-    $('.sticky').addClass('hide');
+  $("html, body").on("click", function (e) {
+    $(".sticky").addClass("hide");
   });
 });
 
 $(function () {
-  $('.js-search-toggle').on('click', function (e) {
+  $(".js-search-toggle").on("click", function (e) {
     if ($(window).width() < 1200) {
       return;
     }
     e.stopPropagation();
-    $('.js-search').addClass('show');
-    $('.js-search').find('.form-control').focus();
+    $(".js-search").addClass("show");
+    $(".js-search").find(".form-control").focus();
   });
 
-  $('.js-search').on('click', function (e) {
+  $(".js-search").on("click", function (e) {
     e.stopPropagation();
   });
 
-  $('html, body').on('click', function () {
+  $("html, body").on("click", function () {
     if ($(window).width() < 1200) {
       return;
     }
-    $('.js-search').removeClass('show');
+    $(".js-search").removeClass("show");
   });
 });
